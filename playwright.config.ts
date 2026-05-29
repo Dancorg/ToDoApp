@@ -75,9 +75,11 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'cd app && npm run dev',
+    command: 'cd app && npm run dev -- --host',
     url: process.env.BASE_URL ?? 'http://localhost:3001',
     reuseExistingServer: !process.env.CI,
     timeout: 120000,
+    stdout: 'pipe',
+    stderr: 'pipe',
   },
 });
