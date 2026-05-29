@@ -3,7 +3,7 @@ import { TodoCard } from '../components/TodoCard';
 import { NewTaskModal } from '../components/NewTaskModal';
 
 export class ToDoPage {
-    readonly url = '/';
+    readonly url: string;
     readonly welcome: Locator;
     readonly addTask: Locator;
     readonly nightMode: Locator;
@@ -29,6 +29,7 @@ export class ToDoPage {
         this.statCompleted = page.getByTestId('stat-completed');
         this.list = page.getByTestId('todo-list');
         this.page = page;
+        this.url = '/';
     }
     
     
