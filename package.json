@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cd app && npm install && npm run dev"
+    "dev": "cd app && npm install && npm run dev -- --host"
   },
   "keywords": [],
   "author": "",
